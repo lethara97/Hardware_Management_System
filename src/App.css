@@ -1,3 +1,8 @@
+body,
+html {
+  font-family: 'Time new Roman', cursive;
+}
+
 .App {
   text-align: center;
 }
