@@ -9,7 +9,7 @@ export default class AdminDashboard extends Component{
     <div className>
 
       
-    <h1 className="text-center" style = {{backgroundColor:'white'}}><font face = "Comic sans MS" size ="8"><b>Manamperi Hardware</b></font></h1><br/>
+    <h1 className="text-center" style = {{backgroundColor:'red'}}><font face = "Comic sans MS" size ="10"><b>Manamperi Hardware</b></font></h1><br/>
     <h2 className="text-center" style = {{color:'#0066d3'}}><font face = "Comic sans MS" size ="6"><b>Admin Dashboard</b></font></h2>
 
     <table class="center">
