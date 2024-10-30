@@ -76,13 +76,4 @@ router.route('/update/:id').post((req, res) => {
 });
 
 
-
-router.route('/search').post((req, res) => {
-    Customer.find({ username: req.body.username })
-        .then(Customer => res.json(Customer))
-        .catch(err => res.status(400).json('Error: ' + err));
-}
-);
-
-
 module.exports = router;
