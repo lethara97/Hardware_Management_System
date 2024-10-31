@@ -75,14 +75,11 @@ router.route('/update/:id').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-
-
-router.route('/search').post((req, res) => {
-    Customer.find({ username: req.body.username })
+router.route('/search/:username').get((req, res) => {
+    Customer.find({ username: req.params.username })
         .then(Customer => res.json(Customer))
         .catch(err => res.status(400).json('Error: ' + err));
-}
-);
+});
 
 
 module.exports = router;
