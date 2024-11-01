@@ -66,4 +66,11 @@ router.route("/search/:DPID").get((req, res) => {
         .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route("/delete").delete((req, res) => {
+    Delivery.deleteMany()
+        .then(() => res.json("All Delivery deleted."))
+        .catch((err) => res.status(400).json("Error: " + err));
+});
+
+
 module.exports = router;
