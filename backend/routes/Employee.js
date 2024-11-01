@@ -80,4 +80,16 @@ router.route('/update/:id').post((req, res) => {
 });
 
 
+router.route('/login').post((req, res) => {
+    const username = req.body.username;
+    const password = req.body.password
+
+    Employee.findOne({ username: username, password: password })
+        .then(Employee => res.json(Employee))
+        .catch(err => res.status(400).json('Error: ' + err));
+    
+});
+
+
+
 module.exports = router;

@@ -62,4 +62,11 @@ router.route("/:id").delete((req, res) => {
         .catch((err) => res.status(400).json("Error: " + err));
 });
 
+
+router.route("/find/:SupID").get((req, res) => {
+    Supplier.find({ SupID: req.params.SupID })
+        .then((Supplier) => res.json(Supplier))
+        .catch((err) => res.status(400).json("Error: " + err));
+});
+
 module.exports = router;

@@ -60,6 +60,12 @@ router.route("/:id").delete((req, res) => {
         .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route("/search/:DPID").get((req, res) => {
+    Delivery.find({ DPID: req.params.DPID })
+        .then((Delivery) => res.json(Delivery))
+        .catch((err) => res.status(400).json("Error: " + err));
+});
+
 router.route("/delete").delete((req, res) => {
     Delivery.deleteMany()
         .then(() => res.json("All Delivery deleted."))
